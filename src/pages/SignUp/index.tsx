@@ -1,9 +1,9 @@
-import styles from './signup.module.scss';
+import React from 'react';
 
 const SignUp = () => {
   return (
     <h1>Sign Up</h1>
-  )
-}
+  );
+};
 
-export { SignUp }
+export {SignUp};

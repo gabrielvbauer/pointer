@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { SignIn } from './pages/SignIn';
-import { SignUp } from './pages/SignUp';
-import { PasswordRedefinitionEmail } from './pages/PasswordRedefinition/Email';
-import { PasswordRedefinition } from './pages/PasswordRedefinition/Redefinition';
-import { Dashboard } from './pages/Dashboard';
+import React from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {SignIn} from './pages/SignIn';
+import {SignUp} from './pages/SignUp';
+import {PasswordRedefinitionEmail} from './pages/PasswordRedefinition/Email';
+import {PasswordRedefinition} from './pages/PasswordRedefinition/Redefinition';
+import {Dashboard} from './pages/Dashboard';
 
 function App() {
   return (
