@@ -1,0 +1,82 @@
+@import 'styles/theme.scss';
+
+.container {
+  padding: 32px 18px;
+  height: 100vh;
+  width: 84px;
+  max-width: 214px;
+  background-color: $brandPrimary500;
+
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 38px;
+
+  transition: .6s width ease-in-out;
+
+  position: absolute;
+
+  &:hover {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  >svg {
+    margin-left: 8px;
+  }
+
+  nav {
+    width: 100%;
+    flex: 1;
+
+    .navigationItem {
+      width: 100%;
+      overflow: hidden;
+      height: 48px;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &:nth-child(1) {
+        background-color: $brandPrimary700;
+      }
+
+      span {
+        width: 0;
+        font-size: 1rem;
+        font-weight: 500;
+        transform: translateX(12px);
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    height: 48px;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: $white100;
+    background-color: $accentTeal;
+    transition: .3s all ease-out;
+
+    &:hover {
+      background-color: $accentTealHover;
+    }
+
+    span {
+      width: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      transform: translateX(12px);
+    }
+  }
+}

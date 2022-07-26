@@ -1,0 +1,35 @@
+@import 'styles/theme.scss';
+
+.kpi {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .icon {
+    padding: 10px;
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    background-color: $accentGreen100;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    small {
+      font-size: 0.875rem;
+      color: $white600;
+      font-weight: 500;
+      line-height: 0.875rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $white100;
+      font-weight: 600;
+      line-height: 1.5rem;
+    }
+  }
+}

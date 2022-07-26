@@ -1,0 +1,44 @@
+@import 'styles/theme.scss';
+
+.pageContainer {
+  margin-left: 84px;
+  padding: 38px 48px;
+  display: grid;
+  grid-template-areas: "header header"
+                       "kpis details"
+                       "today details"
+                       "month month";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 36px;
+
+  .kpisContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: kpis;
+  }
+
+  .todayPoints {
+    grid-area: today;
+    width: 100%;
+    height: 100%;
+    background-color: $brandPrimary500;
+  }
+
+  .todayDetails {
+    grid-area: details;
+    width: 100%;
+    height: 100%;
+    background-color: $brandPrimary500;
+
+  }
+
+  .monthPoints {
+    grid-area: month;
+    width: 100%;
+    height: 100%;
+    background-color: $brandPrimary500;
+
+  }
+}
