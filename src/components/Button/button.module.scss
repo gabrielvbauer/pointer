@@ -1,0 +1,21 @@
+@import 'styles/theme.scss';
+
+.button {
+  min-height: 36px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: $white100;
+  background-color: $accentTeal;
+  transition: .3s all ease-out;
+  gap: 10px;
+
+  &:hover {
+    background-color: $accentTealHover;
+  }
+}
