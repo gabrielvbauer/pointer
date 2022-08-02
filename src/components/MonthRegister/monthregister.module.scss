@@ -1,0 +1,68 @@
+@import 'styles/theme.scss';
+
+.monthRegister {
+  width: 100%;
+  max-width: 346px;
+  min-width: 346px;
+  border-radius: 8px;
+  background-color: $brandPrimary500;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+
+  &.registerValid {
+    &::after {
+      background-color: $accentGreen100;
+    }
+  }
+
+  &.registerInvalid {
+    &::after {
+      background-color: $accentPink;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .monthRegisterHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: $white600;
+    }
+  }
+
+  .monthRegisterContent {
+    display: grid;
+    grid-template-areas: "worked extras"
+      "remaining total";
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 1fr 1fr;
+    gap: 1rem;
+
+    p {
+      font-size: 1rem;
+      line-height: 1rem;
+      font-weight: 600;
+    }
+
+    small {
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      font-weight: 400;
+      color: $white300;
+    }
+  }
+}

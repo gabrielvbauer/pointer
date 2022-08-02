@@ -20,6 +20,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "require-jsdoc": "off"
+        "require-jsdoc": "off",
+        "max-len": 0,
+        "no-unused-vars": "warn"
     }
 }

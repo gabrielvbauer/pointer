@@ -1,0 +1,17 @@
+@import 'styles/theme.scss';
+
+.listItem {
+  display: grid;
+  grid-template-areas: "contentIcon contentTitle contentHour contentPoint contentOptions";
+  grid-template-columns: minmax(24px, 48px) minmax(121px, 0.7fr) minmax(64px, 1fr) 1.5fr 24px;
+  padding: 6px 0;
+
+  span {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  svg {
+    color: $accentTeal;
+  }
+}

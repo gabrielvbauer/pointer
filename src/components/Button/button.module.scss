@@ -14,8 +14,32 @@
   background-color: $accentTeal;
   transition: .3s all ease-out;
   gap: 10px;
+  min-width: 170px;
+  justify-content: center;
 
   &:hover {
     background-color: $accentTealHover;
+  }
+
+  &:disabled {
+    filter: grayscale(5);
+
+    &:hover {
+      background-color: $accentTeal;
+    }
+  }
+
+  .loadingIcon {
+    animation: infinite spin .9s;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
 }

@@ -5,9 +5,9 @@
   padding: 38px 48px;
   display: grid;
   grid-template-areas: "header header"
-                       "kpis details"
-                       "today details"
-                       "month month";
+    "kpis details"
+    "today details"
+    "month month";
   grid-template-columns: 3fr minmax(296px, 1fr);
   gap: 36px;
 
@@ -51,39 +51,21 @@
         }
       }
 
-      .listContent {
-        .listItem {
-          display: grid;
-          grid-template-areas: "contentIcon contentTitle contentHour contentPoint contentOptions";
-          grid-template-columns: minmax(24px, 48px) minmax(121px, 0.7fr) minmax(64px, 1fr) 1.5fr 24px;
-          padding: 6px 0;
-
-          span {
-            font-size: 0.875rem;
-            font-weight: 600;
-          }
-
-          svg {
-            color: $accentTeal;
-          }
-        }
-      }
-
       .detailsList {
         margin-top: 16px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        
+
         .detailItem {
           display: flex;
           justify-content: space-between;
           padding: 12px 0;
-          
+
           span {
             font-size: 0.75rem;
           }
-          
+
           &:not(:last-of-type) {
             border-bottom: 1px dashed $white600;
           }
@@ -98,6 +80,14 @@
 
   .todayPoints {
     grid-area: today;
+
+    .boxContent {
+      .listContent {
+        overflow-y: auto;
+        min-height: 154px;
+        max-height: 154px;
+      }
+    }
   }
 
   .todayDetails {
@@ -117,74 +107,19 @@
       display: flex;
       margin-top: 24px;
       gap: 1rem;
-      overflow-x: scroll;
+      overflow: hidden;
+      position: relative;
 
-      .monthRegister {
-        width: 100%;
-        max-width: 346px;
-        min-width: 346px;
-        border-radius: 8px;
-        background-color: $brandPrimary500;
-        position: relative;
-        overflow: hidden;
-        padding: 24px;
-
-        &.registerValid {
-          &::after {
-            background-color: $accentGreen100;
-          }
-        }
-
-        &.registerInvalid {
-          &::after {
-            background-color: $accentPink;
-          }
-        }
-
-        &::after {
-          content: "";
-          width: 10px;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          right: 0;
-        }
-
-        .monthRegisterHeader {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 1rem;
-
-          span {
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: $white600;
-          }
-        }
-
-        .monthRegisterContent {
-          display: grid;
-          grid-template-areas: "worked extras"
-                               "remaining total";
-          grid-template-columns: 1.5fr 1fr;
-          grid-template-areas: 1fr 1fr;
-          gap: 1rem;
-
-          p {
-            font-size: 1rem;
-            line-height: 1rem;
-            font-weight: 600;
-          }
-
-          small {
-            font-size: 0.75rem;
-            line-height: 0.75rem;
-            font-weight: 400;
-            color: $white300;
-          }
-        }
+      &::after {
+        content: "";
+        height: 100%;
+        width: 15%;
+        background-image: linear-gradient(90deg, transparent, $brandPrimary100);
+        position: absolute;
+        right: 0;
+        top: 0;
       }
+
     }
   }
 }
