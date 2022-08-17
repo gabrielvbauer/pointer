@@ -23,7 +23,6 @@ const MonthRegister = ({
   extraHours,
   remainingHours,
   total,
-  markings,
 }: Props) => {
   return (
     <div
